@@ -1,0 +1,123 @@
+@keyframes header-appears {
+    from {
+        opacity: 0;
+        transform: translateY(-1vw);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header {
+    animation: header-appears 700ms ease-out both;
+}
+
+@keyframes discount-popup-appears {
+    from {
+        opacity: 0;
+        transform: translate(-50%, calc(-50% + 3vw));
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes istora-drift {
+    0% {
+        transform: translate(0, 8vw) scale(0.9);
+    }
+    22% {
+        transform: translate(3vw, -6vw) scale(0.98);
+    }
+    45% {
+        transform: translate(1vw, 7vw) scale(0.86);
+    }
+    68% {
+        transform: translate(4vw, 2vw) scale(0.94);
+    }
+    84% {
+        transform: translate(0.5vw, -7vw) scale(1);
+    }
+    100% {
+        transform: translate(3vw, 6vw) scale(0.88);
+    }
+}
+
+@keyframes istora-sharpness {
+    0%, 100% {
+        opacity: 0.82;
+        filter: blur(0.08vw);
+    }
+    28% {
+        opacity: 0.08;
+        filter: blur(1.2vw);
+    }
+    52% {
+        opacity: 0.7;
+        filter: blur(0.15vw);
+    }
+    76% {
+        opacity: 0;
+        filter: blur(1.7vw);
+    }
+}
+
+@keyframes istora-blur {
+    0%, 100% {
+        opacity: 0.16;
+        filter: blur(0.15vw);
+    }
+    28% {
+        opacity: 0.94;
+        filter: blur(0.85vw);
+    }
+    52% {
+        opacity: 0.25;
+        filter: blur(0.2vw);
+    }
+    76% {
+        opacity: 1;
+        filter: blur(1.25vw);
+    }
+}
+
+.brand-poster__word {
+    animation: istora-drift 60s ease-in-out infinite alternate;
+}
+
+.brand-poster__word-image--sharp {
+    animation: istora-sharpness 48s ease-in-out infinite;
+}
+
+.brand-poster__word-image--blur {
+    animation: istora-blur 48s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .header {
+        animation: none;
+    }
+
+    .header__link::after,
+    .header__logo,
+    .header__basket {
+        transition: none;
+    }
+
+    .brand-poster__word,
+    .brand-poster__word-image--sharp,
+    .brand-poster__word-image--blur {
+        animation: none;
+    }
+
+    .brand-poster__word-image--sharp {
+        opacity: 0.35;
+        filter: blur(0.5vw);
+    }
+
+    .brand-poster__word-image--blur {
+        opacity: 0.7;
+    }
+}

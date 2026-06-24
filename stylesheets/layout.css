@@ -1,0 +1,368 @@
+.hero {
+    position: relative;
+    width: 100vw;
+    height: 59vw;
+    overflow: hidden;
+    background: #101010;
+}
+
+.hero__video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 62.5vw;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.header {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    width: 100vw;
+    padding: 2.05vw 5.45vw 0;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    gap: 3.68vw;
+}
+
+.header__logo {
+    width: 10.7vw;
+}
+
+.header__logo img {
+    width: 100%;
+    height: auto;
+}
+
+.header__basket {
+    justify-self: end;
+    width: 2.6vw;
+}
+
+.header__basket img {
+    width: 100%;
+    height: auto;
+}
+
+.bestsellers {
+    display: grid;
+    grid-template-columns: repeat(4, 25vw);
+    grid-template-rows: repeat(2, 36.8vw);
+    width: 100vw;
+    background: #fefff8;
+    border-top: 0.07vw solid #202020;
+    border-left: 0.07vw solid #202020;
+}
+
+.bestsellers > * {
+    min-width: 0;
+    border-right: 0.07vw solid #202020;
+    border-bottom: 0.07vw solid #202020;
+}
+
+.bestsellers__intro {
+    padding: 2.65vw 2.2vw;
+}
+
+.product {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.product__image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    object-fit: contain;
+    transform: translate(-50%, -58%);
+    transition: transform 600ms ease;
+}
+
+.product--tube .product__image {
+    height: 24vw;
+}
+
+.product--white .product__image,
+.product--pink .product__image,
+.product--grey .product__image {
+    width: 17.2vw;
+    height: 17.2vw;
+}
+
+.product--squeezer .product__image {
+    width: 23vw;
+    height: 23vw;
+}
+
+.product__info {
+    position: absolute;
+    right: 1.35vw;
+    bottom: 2.05vw;
+    left: 1.35vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.32vw;
+}
+
+.bestsellers__story {
+    grid-column: span 2;
+    overflow: hidden;
+}
+
+.bestsellers__story img {
+    position: relative;
+    left: -0.06vw;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.new-collection {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 50vw);
+    width: 100vw;
+    height: 59vw;
+    background: #c1c1c1;
+    border-bottom: 0.07vw solid #202020;
+}
+
+.new-collection::after {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 0.07vw;
+    background: #202020;
+    content: "";
+    pointer-events: none;
+}
+
+.new-collection__visual {
+    position: relative;
+    height: 59vw;
+    overflow: hidden;
+}
+
+.new-collection__background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.new-collection__product {
+    position: absolute;
+    top: 19.2vw;
+    left: 8vw;
+    width: 34vw;
+    height: auto;
+}
+
+.new-collection__content {
+    padding: 2.9vw 3.25vw;
+}
+
+.new-collection__button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15.8vw;
+    height: 3.55vw;
+    overflow: hidden;
+}
+
+.journal {
+    width: 100vw;
+    height: 43.75vw;
+    background: #fefff8;
+    border-top: 0.07vw solid #202020;
+    border-bottom: 0.07vw solid #202020;
+    overflow: hidden;
+}
+
+.journal__list {
+    display: grid;
+    grid-template-columns: repeat(3, 18vw);
+    gap: 5.5vw;
+    justify-content: center;
+    padding-top: 9.15vw;
+}
+
+.journal-card {
+    display: block;
+    min-width: 0;
+}
+
+.journal-card__image {
+    width: 18vw;
+    height: 23.4vw;
+    object-fit: cover;
+}
+
+.journal-card__title {
+    display: block;
+    margin-top: 1.95vw;
+}
+
+.brand-poster {
+    display: grid;
+    grid-template-columns: repeat(2, 50vw);
+    width: 100vw;
+    height: 62.5vw;
+}
+
+.brand-poster__field {
+    position: relative;
+    height: 62.5vw;
+    overflow: hidden;
+    background: #f7f7f7;
+    border-right: 0.07vw solid #202020;
+}
+
+.brand-poster__word {
+    position: absolute;
+    top: 21vw;
+    left: 8.5vw;
+    width: 48vw;
+    aspect-ratio: 1996 / 848;
+    will-change: transform;
+}
+
+.brand-poster__word-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    will-change: filter, opacity;
+}
+
+.brand-poster__photo {
+    height: 62.5vw;
+    overflow: hidden;
+}
+
+.brand-poster__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.faq {
+    width: 100vw;
+    background: #fefff8;
+}
+
+.faq__header {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 4.55vw;
+    padding: 0 3.7vw;
+    border-top: 0.07vw solid #202020;
+    border-bottom: 0.07vw solid #202020;
+}
+
+.faq-item {
+    width: 100vw;
+    border-bottom: 0.07vw solid #202020;
+}
+
+.faq-item__button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 7.4vw;
+    padding: 0 4.1vw;
+    background: transparent;
+    cursor: pointer;
+}
+
+.faq-item__arrow {
+    position: relative;
+    flex: 0 0 auto;
+    width: 3.6vw;
+    height: 2.75vw;
+}
+
+.faq-item__arrow::before {
+    position: absolute;
+    top: 0.82vw;
+    left: 1.35vw;
+    width: 0.72vw;
+    height: 0.72vw;
+    border-right: 0.1vw solid #111;
+    border-bottom: 0.1vw solid #111;
+    content: "";
+    transform: rotate(45deg);
+    transition: transform 450ms ease, top 450ms ease;
+}
+
+.faq-item__answer {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transition: grid-template-rows 550ms ease, opacity 400ms ease;
+}
+
+.faq-item__answer-inner {
+    min-height: 0;
+    overflow: hidden;
+}
+
+.faq-item__answer p {
+    margin: 0;
+    padding: 0 4.1vw 4vw;
+}
+
+.faq-item.is-open .faq-item__answer {
+    grid-template-rows: 1fr;
+    opacity: 1;
+}
+
+.faq-item.is-open .faq-item__arrow::before {
+    top: 1.14vw;
+    transform: rotate(225deg);
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    width: 100vw;
+    height: 9.2vw;
+    padding: 0 3.7vw;
+    background: #171717;
+}
+
+.footer__logo {
+    width: 12.6vw;
+}
+
+.footer__logo img {
+    width: 100%;
+    height: auto;
+}
+
+.footer__links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-self: end;
+}

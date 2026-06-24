@@ -1,0 +1,367 @@
+.product-page {
+    background: #fefff8;
+    color: #111;
+}
+
+.product-detail {
+    display: grid;
+    grid-template-columns: repeat(2, 50vw);
+    width: 100vw;
+    height: 63vw;
+}
+
+.product-gallery {
+    position: relative;
+    height: 63vw;
+    overflow: hidden;
+    border-right: 0.07vw solid #202020;
+}
+
+.product-gallery__back {
+    position: absolute;
+    z-index: 4;
+    top: 2.8vw;
+    left: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3vw;
+    height: 3vw;
+}
+
+.product-gallery__back span,
+.product-gallery__nav span {
+    width: 1.05vw;
+    height: 1.05vw;
+    border-bottom: 0.11vw solid #111;
+    border-left: 0.11vw solid #111;
+    transform: rotate(45deg);
+}
+
+.product-gallery__slides,
+.product-gallery__slide {
+    position: absolute;
+    inset: 0;
+}
+
+.product-gallery__slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 600ms ease;
+}
+
+.product-gallery__slide.is-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.product-gallery__cutout {
+    width: 29vw;
+    height: 29vw;
+    object-fit: contain;
+}
+
+.product-gallery__cutout--tube {
+    width: 29vw;
+    height: 55vw;
+}
+
+.product-gallery__cutout--squeezer {
+    width: 35vw;
+    height: 43vw;
+}
+
+.product-gallery__cutout--lip {
+    width: 38vw;
+    height: 26vw;
+}
+
+.product-gallery__real {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-gallery__nav {
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.8vw;
+    height: 4.8vw;
+    background: transparent;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.product-gallery__nav--prev {
+    left: 0.8vw;
+}
+
+.product-gallery__nav--next {
+    right: 0.8vw;
+}
+
+.product-gallery__nav--next span {
+    transform: rotate(225deg);
+}
+
+.product-gallery__nav:disabled {
+    cursor: default;
+}
+
+.product-details {
+    display: grid;
+    grid-template-rows: 48.5vw 14.5vw;
+    height: 63vw;
+}
+
+.product-details__buy {
+    position: relative;
+    padding: 3.7vw 3.8vw;
+}
+
+.product-details__brand {
+    margin: 0 0 3.2vw;
+    font-size: 1.18vw;
+}
+
+.product-details h1 {
+    margin: 0 0 0.75vw;
+    font-size: 2.05vw;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.product-details__subtitle {
+    margin: 0;
+    font-size: 1.3vw;
+    font-style: italic;
+}
+
+.product-details__purchase {
+    position: absolute;
+    top: 27vw;
+    left: 3.8vw;
+}
+
+.product-details__price {
+    margin: 0 0 1.8vw;
+    font-size: 2.1vw;
+}
+
+.product-quantity {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 12.3vw;
+    height: 3.3vw;
+    margin-bottom: 1.55vw;
+    border: 0.07vw solid #202020;
+}
+
+.product-quantity button,
+.product-quantity output {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    font-size: 1.4vw;
+}
+
+.product-quantity button {
+    cursor: pointer;
+}
+
+.product-details__cart {
+    width: 22vw;
+    height: 3.7vw;
+    background: #171717;
+    border: 0.07vw solid #171717;
+    color: #fff;
+    font-size: 1.1vw;
+    cursor: pointer;
+    transition: background-color 300ms ease, color 300ms ease;
+}
+
+.product-details__cart:hover,
+.product-details__cart:focus-visible {
+    background: #fff;
+    color: #111;
+    outline: none;
+}
+
+.product-details__volume {
+    position: absolute;
+    bottom: 2.7vw;
+    left: 3.8vw;
+    margin: 0;
+    font-size: 1.35vw;
+}
+
+.product-details__description {
+    padding: 3.2vw 3.8vw;
+    border-top: 0.07vw solid #202020;
+}
+
+.product-details__description h2 {
+    margin: 0 0 1.7vw;
+    font-size: 1.3vw;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.product-details__description p {
+    margin: 0;
+    font-size: 0.98vw;
+    line-height: 1.2;
+}
+
+@media (max-width: 900px) {
+    .product-detail,
+    .product-gallery,
+    .product-details {
+        height: 80vw;
+    }
+
+    .product-details {
+        grid-template-rows: 61vw 19vw;
+    }
+
+    .product-gallery__cutout {
+        width: 38vw;
+        height: 38vw;
+    }
+
+    .product-details__brand {
+        font-size: 1.8vw;
+    }
+
+    .product-details h1 {
+        font-size: 2.6vw;
+    }
+
+    .product-details__subtitle,
+    .product-details__volume,
+    .product-details__description h2 {
+        font-size: 1.8vw;
+    }
+
+    .product-details__purchase {
+        top: 34vw;
+    }
+
+    .product-details__description p {
+        font-size: 1.35vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .product-detail {
+        grid-template-columns: 100vw;
+        height: auto;
+    }
+
+    .product-gallery {
+        height: 120vw;
+        border-right: 0;
+        border-bottom: 0.07vw solid #202020;
+    }
+
+    .product-gallery__back {
+        top: 5vw;
+        left: 4vw;
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .product-gallery__back span,
+    .product-gallery__nav span {
+        width: 3vw;
+        height: 3vw;
+        border-width: 0.3vw;
+    }
+
+    .product-gallery__cutout {
+        width: 72vw;
+        height: 72vw;
+    }
+
+    .product-gallery__nav {
+        width: 14vw;
+        height: 14vw;
+    }
+
+    .product-details {
+        grid-template-rows: 115vw auto;
+        height: auto;
+    }
+
+    .product-details__buy {
+        padding: 10vw 5vw;
+    }
+
+    .product-details__brand {
+        margin-bottom: 8vw;
+        font-size: 3.8vw;
+    }
+
+    .product-details h1 {
+        font-size: 5.5vw;
+    }
+
+    .product-details__subtitle,
+    .product-details__volume,
+    .product-details__description h2 {
+        font-size: 3.8vw;
+    }
+
+    .product-details__purchase {
+        top: 48vw;
+        left: 5vw;
+    }
+
+    .product-details__price {
+        font-size: 6vw;
+    }
+
+    .product-quantity {
+        width: 40vw;
+        height: 12vw;
+        margin-bottom: 5vw;
+    }
+
+    .product-quantity button,
+    .product-quantity output {
+        font-size: 4.5vw;
+    }
+
+    .product-details__cart {
+        width: 70vw;
+        height: 13vw;
+        font-size: 3.8vw;
+    }
+
+    .product-details__volume {
+        bottom: 8vw;
+        left: 5vw;
+    }
+
+    .product-details__description {
+        padding: 9vw 5vw 12vw;
+    }
+
+    .product-details__description p {
+        font-size: 3.5vw;
+        line-height: 1.35;
+    }
+
+    .product-details__description br {
+        display: none;
+    }
+}

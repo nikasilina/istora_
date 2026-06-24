@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Istora — косметика, рожденная из ощущения воды.">
+<title>Istora</title>
+<link rel="stylesheet" href="stylesheets/reset.css">
+<link rel="stylesheet" href="stylesheets/fonts.css">
+<link rel="stylesheet" href="stylesheets/layout.css?v=3">
+<link rel="stylesheet" href="stylesheets/style.css?v=8">
+<link rel="stylesheet" href="stylesheets/animation.css">
+<link rel="stylesheet" href="stylesheets/adaptive.css?v=10">
+</head>
+<body>
+<main>
+<section class="hero">
+<video class="hero__video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+<source src="images/videoforwebsite.mp4" type="video/mp4">
+</video>
+
+<header class="header">
+<nav class="header__nav" aria-label="Основная навигация">
+<button class="header__burger" type="button" aria-label="Открыть меню" aria-expanded="false">
+<span aria-hidden="true"></span>
+<span aria-hidden="true"></span>
+<span aria-hidden="true"></span>
+</button>
+<a class="header__link" href="404.html">о нас</a>
+<a class="header__link" href="catalog.html">каталог</a>
+<a class="header__link" href="#contacts">контакты</a>
+</nav>
+
+<a class="header__logo" href="index.html" aria-label="Istora — главная">
+<img src="images/menu%20logo.svg?v=2" alt="Istora">
+</a>
+
+<a class="header__basket" href="404.html" aria-label="Открыть корзину">
+<img src="images/basket.svg" alt="">
+</a>
+</header>
+
+<aside class="discount-popup" aria-labelledby="discount-title">
+<button class="discount-popup__close" type="button" aria-label="Закрыть плашку со скидкой">
+<span aria-hidden="true"></span>
+<span aria-hidden="true"></span>
+</button>
+
+<form class="discount-popup__form" novalidate>
+<p class="discount-popup__label" id="discount-title">СКИДКА</p>
+<p class="discount-popup__value">-15%</p>
+<p class="discount-popup__subtitle">НОВЫМ КЛИЕНТАМ ПРИ РЕГИСТРАЦИИ</p>
+
+<label class="visually-hidden" for="discount-email">Email</label>
+<input class="discount-popup__email" id="discount-email" type="email" name="email" placeholder="EMAIL" autocomplete="email" required>
+<p class="discount-popup__error" aria-live="polite">Введите email в формате name@example.com</p>
+
+<button class="discount-popup__submit" type="submit">ПОЛУЧИТЬ СКИДКУ</button>
+</form>
+</aside>
+</section>
+
+<section class="bestsellers" aria-labelledby="bestsellers-title">
+<div class="bestsellers__intro">
+<h2 id="bestsellers-title">НАШИ <em>БЕСТСЕЛЛЕРЫ</em></h2>
+<p>Наша продукция производится<br>небольшими партиями,<br>чтобы гарантировать, что на&nbsp;вашей<br>полке в&nbsp;ванной всегда будут свежие<br>средства по&nbsp;уходу за&nbsp;кожей.</p>
+</div>
+
+<a class="product product--tube" id="face-cream-home" href="product-tube.html?from=home">
+<img class="product__image" src="images/tube.png" alt="Увлажняющий крем для лица">
+<span class="product__info">
+<span class="product__name">УВЛАЖНЯЮЩИЙ КРЕМ ДЛЯ&nbsp;ЛИЦА</span>
+<span class="product__price">1100 руб.</span>
+</span>
+</a>
+
+<a class="product product--white" id="body-butter-white-home" href="product-white.html?from=home">
+<img class="product__image" src="images/jarwhite.png" alt="Белый баттер для тела">
+<span class="product__info">
+<span class="product__name">БАТТЕР ДЛЯ&nbsp;ТЕЛА</span>
+<span class="product__price">1800 руб.</span>
+</span>
+</a>
+
+<a class="product product--pink" id="body-butter-pink-home" href="product-pink.html?from=home">
+<img class="product__image" src="images/jarpink.png" alt="Розовый баттер для тела">
+<span class="product__info">
+<span class="product__name">БАТТЕР ДЛЯ&nbsp;ТЕЛА</span>
+<span class="product__price">1800 руб.</span>
+</span>
+</a>
+
+<a class="product product--squeezer" id="squeezer-home" href="product-squeezer.html?from=home">
+<img class="product__image" src="images/sqweezer.png" alt="Сквизер для тюбика">
+<span class="product__info">
+<span class="product__name">СКВИЗЕР</span>
+<span class="product__price">900 руб.</span>
+</span>
+</a>
+
+<a class="product product--grey" id="body-butter-grey-home" href="product-grey.html?from=home">
+<img class="product__image" src="images/jargrey.png" alt="Серый баттер для тела">
+<span class="product__info">
+<span class="product__name">БАТТЕР ДЛЯ&nbsp;ТЕЛА</span>
+<span class="product__price">1800 руб.</span>
+</span>
+</a>
+
+<a class="bestsellers__story" href="catalog.html" aria-label="Смотреть каталог Istora">
+<img src="images/jarinwater.svg" alt="Баттер Istora в воде">
+</a>
+</section>
+
+<section class="new-collection" aria-labelledby="new-collection-title">
+<div class="new-collection__visual">
+<img class="new-collection__background" src="images/backgrlipbalm.png" alt="Скалистый берег у воды">
+<img class="new-collection__product" src="images/lipbalm.png" alt="Бальзам для губ Istora">
+</div>
+
+<div class="new-collection__content">
+<p class="new-collection__eyebrow">НОВАЯ КОЛЛЕКЦИЯ</p>
+<h2 id="new-collection-title">БАЛЬЗАМ ДЛЯ&nbsp;ГУБ С&nbsp;ЭКСТРАКТОМ ЛАМИНАРИИ</h2>
+<a class="new-collection__button" id="lip-balm-home" href="product-lip.html?from=home">УЗНАТЬ БОЛЬШЕ</a>
+</div>
+</section>
+
+<section class="journal" id="journal" aria-label="Журнал Istora">
+<div class="journal__list">
+<a class="journal-card" href="article-water.html">
+<img class="journal-card__image" src="images/question1.png" alt="Баттер Istora на фоне воды и скал">
+<span class="journal-card__title">КАК ВОДА, ВОЗДУХ И&nbsp;КЛИМАТ<br>ВЛИЯЮТ НА&nbsp;СОСТОЯНИЕ КОЖИ?</span>
+</a>
+
+<a class="journal-card" href="article-redness.html">
+<img class="journal-card__image" src="images/question2.png" alt="Крем Istora среди тёмных камней">
+<span class="journal-card__title">КАК УМЕНЬШИТЬ ПОКРАСНЕНИЯ<br>И&nbsp;РАЗДРАЖЕНИЕ КОЖИ?</span>
+</a>
+
+<a class="journal-card" href="article-order.html">
+<img class="journal-card__image" src="images/question3.png" alt="Баттер Istora на скалистом берегу">
+<span class="journal-card__title">В&nbsp;КАКОМ ПОРЯДКЕ НАНОСИТЬ<br>УХОДОВЫЕ СРЕДСТВА?</span>
+</a>
+</div>
+</section>
+
+<section class="brand-poster" aria-label="Визуальная история Istora">
+<div class="brand-poster__field">
+<div class="brand-poster__word" aria-hidden="true">
+<img class="brand-poster__word-image brand-poster__word-image--sharp" src="images/istoranonblur.png" alt="">
+<img class="brand-poster__word-image brand-poster__word-image--blur" src="images/istorablur.png" alt="">
+</div>
+<span class="visually-hidden">Istora</span>
+</div>
+
+<div class="brand-poster__photo">
+<img src="images/posterskin.svg" alt="Крупный план кожи и текстуры крема">
+</div>
+</section>
+
+<section class="faq" aria-labelledby="faq-title">
+<header class="faq__header">
+<h2 id="faq-title"><em>ОСТАВАЙСЯ</em> С&nbsp;НАМИ</h2>
+</header>
+
+<div class="faq-item">
+<button class="faq-item__button" type="button" aria-expanded="false" aria-controls="faq-answer-order">
+<span>КАК ОФОРМИТЬ ЗАКАЗ ДОСТАВКОЙ?</span>
+<span class="faq-item__arrow" aria-hidden="true"></span>
+</button>
+<div class="faq-item__answer" id="faq-answer-order" aria-hidden="true">
+<div class="faq-item__answer-inner">
+<p>Добавьте нужные товары в&nbsp;корзину, укажите контактные данные и&nbsp;выберите<br>удобный способ доставки. После оформления заказа мы отправим<br>подтверждение и&nbsp;информацию для&nbsp;отслеживания на&nbsp;вашу электронную почту.</p>
+</div>
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-item__button" type="button" aria-expanded="false" aria-controls="faq-answer-tracking">
+<span>КАК ОТСЛЕДИТЬ ДОСТАВКУ?</span>
+<span class="faq-item__arrow" aria-hidden="true"></span>
+</button>
+<div class="faq-item__answer" id="faq-answer-tracking" aria-hidden="true">
+<div class="faq-item__answer-inner">
+<p>После передачи заказа в&nbsp;службу доставки мы пришлём трек-номер<br>на&nbsp;вашу электронную почту. По&nbsp;нему можно проверить статус<br>и&nbsp;актуальное местоположение посылки.</p>
+</div>
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-item__button" type="button" aria-expanded="false" aria-controls="faq-answer-payment">
+<span>КАКИЕ СПОСОБЫ ОПЛАТЫ ДОСТУПНЫ?</span>
+<span class="faq-item__arrow" aria-hidden="true"></span>
+</button>
+<div class="faq-item__answer" id="faq-answer-payment" aria-hidden="true">
+<div class="faq-item__answer-inner">
+<p>Заказ можно оплатить банковской картой онлайн. Платёж проходит<br>через защищённую систему, а&nbsp;электронный чек отправляется<br>на&nbsp;указанную при оформлении почту.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="footer" id="contacts">
+<p class="footer__copyright">Создан в&nbsp;России<br>@2023 ISTORA все права защищены</p>
+<a class="footer__logo" href="index.html" aria-label="Istora — главная">
+<img src="images/menu%20logo.svg?v=2" alt="Istora">
+</a>
+<nav class="footer__links" aria-label="Дополнительная навигация">
+<a href="404.html">Политика конфиденциальности</a>
+<a href="404.html">Связаться с&nbsp;нами</a>
+</nav>
+</footer>
+
+<script src="scripts/main.js?v=7" defer></script>
+</body>
+</html>
